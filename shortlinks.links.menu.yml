@@ -1,0 +1,6 @@
+shortlinks.myentity_type.collection:
+  title: 'Short link analytic report'
+  route_name: shortlinks.display_table_controller_display
+  description: 'List Short links'
+  parent: system.admin_reports
+  weight: 100

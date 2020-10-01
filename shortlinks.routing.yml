@@ -1,0 +1,45 @@
+
+shortlinks.generate_link:
+  path: '/short-links'
+  defaults:
+    _form: '\Drupal\shortlinks\Form\GenerateShortLink'
+    _title: 'Generate short links'
+  requirements:
+    _permission: 'access content'
+
+shortlinks.info:
+  path: '/view/{shrt}'
+  defaults:
+    _controller: '\Drupal\shortlinks\Controller\ShortlinkInfoController::display'
+    _title: 'Short link information'
+  requirements:
+    _permission: 'access content'
+
+shortlinks.trigertarget:
+  path: '/target/{shrt}'
+  defaults:
+    _controller: '\Drupal\shortlinks\Controller\TargetController::processlink'
+    _title: 'Redirect to shortlink URL'
+  requirements:
+    _permission: 'access content'
+
+shortlinks.display_table_controller_display:
+  path: '/shortend-analytics'
+  defaults:
+    _controller: '\Drupal\shortlinks\Controller\Analytics::display'
+    _title: 'Shortend link analytics report'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    no_cache: 'TRUE'
+
+shortlinks.display_shortlinks_redirect_details:
+  path: '/shortlink-redirect-details/{shrt}'
+  defaults:
+    _controller: '\Drupal\shortlinks\Controller\Analytics::redirectdetails'
+    _title: 'Shortend link redirect analytics report'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    no_cache: 'TRUE'
+
