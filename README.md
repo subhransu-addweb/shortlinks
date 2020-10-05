@@ -53,7 +53,8 @@ and setup the pages to shown on the front page.
 ### Running the project
 
 After all the setup the block will be shown on the front page.
-Inside the block there will be a form having a text field named as "Web address".
+Inside the block there will be a form 
+having a text field named as "Web address".
 From here user can create any short links from the long URL.
 
 ### setup the rest API
